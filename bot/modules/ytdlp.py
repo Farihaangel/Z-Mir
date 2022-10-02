@@ -36,7 +36,7 @@ def _ytdl(bot, message, isZip=False, isLeech=False):
 
     if BOT_PM and message.chat.type != 'private':
         try:
-            msg1 = f'Added your Requested link to Download\n'
+            msg1 = f'☯ Added your Requested link to Download\n'
             send = bot.sendMessage(user_id, text=msg1)
             send.delete()
         except Exception as e:
