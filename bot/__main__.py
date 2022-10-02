@@ -43,23 +43,21 @@ def stats(update, context):
     cpuUsage = cpu_percent(interval=1)
     memory = virtual_memory()
     mem_p = memory.percent
-    stats = f'<b><i><u>Bot Statistics</u></i></b>\n\n'\
-            f'<b>CPU</b>:  {progress_bar(cpuUsage)} {cpuUsage}%\n' \
-            f'<b>RAM</b>: {progress_bar(mem_p)} {mem_p}%\n' \
-            f'<b>DISK</b>: {progress_bar(disk)} {disk}%\n\n' \
-            f'<b>Updated:</b> {last_commit}\n'\
-            f'<b>I am Working For:</b> <code>{currentTime}</code>\n\n'\
-            f'<b>Total Disk:</b> <code>{total}</code> [{disk}% In use]\n'\
-            f'<b>Used:</b> <code>{used}</code> | <b>Free:</b> <code>{free}</code>\n'\
-            f'<b>T-UL:</b> <code>{sent}</code> | <b>T-DL:</b> <code>{recv}</code>\n'
+    stats = f'<b><i><u>▶Bot Statistics</u></i></b>\n\n'\
+            f'<b>▶CPU</b>:  {progress_bar(cpuUsage)} {cpuUsage}%\n' \
+            f'<b>▶RAM</b>: {progress_bar(mem_p)} {mem_p}%\n' \
+            f'<b>▶DISK</b>: {progress_bar(disk)} {disk}%\n\n' \
+            f'<b>▶Updated:</b> {last_commit}\n'\
+            f'<b>▶I am Working For:</b> <code>{currentTime}</code>\n\n'\
+            f'<b>▶Total Disk:</b> <code>{total}</code> [{disk}% In use]\n'\
+            f'<b>▶Used:</b> <code>{used}</code> | <b>▶Free:</b> <code>{free}</code>\n'\
+            f'<b>▶T-UL:</b> <code>{sent}</code> | <b>▶T-DL:</b> <code>{recv}</code>\n'
     sendMessage(stats, context.bot, update.message)
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Report Group", "https://t.me/Mltb_chat_unofficial")
-    buttons.buildbutton("Repo", "https://github.com/Dawn-India/Z-Mirror")
-    buttons.buildbutton("Mirror Group", "https://t.me/z_mirror")
-    buttons.buildbutton("Owner", "https://t.me/z_mirror")
+    buttons.buildbutton("Support Group", "https://t.me/Opleech_updates")
+    buttons.buildbutton("Owner", "https://t.me/devia_angel")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
