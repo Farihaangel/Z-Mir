@@ -117,7 +117,7 @@ def get_progress_bar_string(status):
     cFull = p // 8
     p_str = '⬢' * cFull
     p_str += '⬡' * (12 - cFull)
-    p_str = f"[{p_str}]"
+    p_str = f"〖{p_str}〗"
     return p_str
 
 def progress_bar(percentage):
@@ -240,9 +240,7 @@ def get_readable_message():
                 elif 'M' in spd:
                     up_speed += float(spd.split('M')[0]) * 1048576
         bmsg = f"\n<b></b>"
-
-        bmsg += f"\n<b>✫   ●◄║ 𝐀𝐍𝐆𝐄𝐋 ║►●   ✫</b>"
-
+        bmsg += f"\n<b>✬   ✾«🅰️🅽🅶🅴🅻»✾   ✬</b>"
         bmsg += f"\n<b></b>"
         bmsg = f"\n<b>╚━━━━━━━━━━◆❃◆━━━━━━━━━━╝</b>"
         bmsg += f"\n<b>♦FREE:</b> <code>{get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}</code><b> | ♦UPTM:</b> <code>{get_readable_time(time() - botStartTime)}</code>"
