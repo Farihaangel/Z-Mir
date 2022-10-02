@@ -40,7 +40,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
 
     if BOT_PM and message.chat.type != 'private':
         try:
-            msg1 = f'Added your Requested link to Download\n'
+            msg1 = f'☯ Added your Requested link to Download\n'
             send = bot.sendMessage(message.from_user.id, text=msg1)
             send.delete()
         except Exception as e:
@@ -49,7 +49,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
             b_uname = bot_d.username
             botstart = f"http://t.me/{b_uname}"
             buttons.buildbutton("Come in PM", f"{botstart}")
-            startwarn = f"<b>Dear {uname}, \n\nPlease come into my PM\n\nand drop a nice message for me.</b>\n\nThen do your tasks again."
+            startwarn = f"<b>Dear {uname}, \n\nPlease come into my PM\n\nand drop a nice message for angel bot.</b>\n\nThen do your tasks again."
             mesg = sendMarkup(startwarn, bot, message, buttons.build_menu(2))
             sleep(15)
             mesg.delete()
