@@ -43,15 +43,15 @@ def stats(update, context):
     cpuUsage = cpu_percent(interval=1)
     memory = virtual_memory()
     mem_p = memory.percent
-    stats = f'<b><i><u>▶Bot Statistics</u></i></b>\n\n'\
-            f'<b>▶CPU</b>:  {progress_bar(cpuUsage)} {cpuUsage}%\n' \
-            f'<b>▶RAM</b>: {progress_bar(mem_p)} {mem_p}%\n' \
-            f'<b>▶DISK</b>: {progress_bar(disk)} {disk}%\n\n' \
-            f'<b>▶Updated:</b> {last_commit}\n'\
-            f'<b>▶I am Working For:</b> <code>{currentTime}</code>\n\n'\
-            f'<b>▶Total Disk:</b> <code>{total}</code> [{disk}% In use]\n'\
-            f'<b>▶Used:</b> <code>{used}</code> | <b>▶Free:</b> <code>{free}</code>\n'\
-            f'<b>▶T-UL:</b> <code>{sent}</code> | <b>▶T-DL:</b> <code>{recv}</code>\n'
+    stats = f'<b><i><u>★Angel Bot Statistics★</u></i></b>\n\n'\
+            f'<b>♦CPU</b>:  {progress_bar(cpuUsage)} {cpuUsage}%\n' \
+            f'<b>♦RAM</b>: {progress_bar(mem_p)} {mem_p}%\n' \
+            f'<b>♦DISK</b>: {progress_bar(disk)} {disk}%\n\n' \
+            f'<b>♦Updated:</b> {last_commit}\n'\
+            f'<b>♦I am Working For:</b> <code>{currentTime}</code>\n\n'\
+            f'<b>♦Total Disk:</b> <code>{total}</code> [{disk}% In use]\n'\
+            f'<b>♦Used:</b> <code>{used}</code> | <b>♦Free:</b> <code>{free}</code>\n'\
+            f'<b>♦T-UL:</b> <code>{sent}</code> | <b>♦T-DL:</b> <code>{recv}</code>\n'
     sendMessage(stats, context.bot, update.message)
 
 def start(update, context):
