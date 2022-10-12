@@ -40,7 +40,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
 
     if BOT_PM and message.chat.type != 'private':
         try:
-            msg1 = f'☯ Added your Requested link to Download\n'
+            msg1 = f'★ Added your Requested link to Download\n'
             send = bot.sendMessage(message.from_user.id, text=msg1)
             send.delete()
         except Exception as e:
