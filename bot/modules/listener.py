@@ -226,7 +226,7 @@ class MirrorLeechListener:
             except Exception as e:
                 LOGGER.warning(e)
                 pass
-        msg = f"<b>Name: </b><code>{escape(name)}</code>\n\n<b>Size: </b>{size}"
+        msg = f"<b>➦ Name: </b><code>{escape(name)}</code>\n\n<b>➦ Size: </b>{size}"
         if BOT_PM and FORCE_BOT_PM and not self.isPrivate:
             botpm = f"<b>\n\nHey {self.tag}!, I have sent your stuff in PM.</b>\n"
             buttons = ButtonMaker()
@@ -279,10 +279,10 @@ class MirrorLeechListener:
                 b_name = bot.get_me().username
                 botstart = f"http://t.me/{b_name}"
                 buttons.buildbutton("View file in PM", f"{botstart}")
-            msg += f'\n<b>Total Files: </b>{folders}'
+            msg += f'\n<b>➦ Total Files: </b>{folders}'
             if typ != 0:
-                msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n<b>cc: </b>{self.tag}\n\n'
+                msg += f'\n<b>➦ Corrupted Files: </b>{typ}'
+            msg += f'\n<b>➦ User: </b>{self.tag}\n\n'
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
@@ -312,12 +312,12 @@ class MirrorLeechListener:
                     clean_target(self.newDir)
                 return
         else:
-            msg += f'\n\n<b>Type: </b>{typ}'
+            msg += f'\n\n<b>➦ Type: </b>{typ}'
             if typ == "Folder":
-                msg += f'\n<b>SubFolders: </b>{folders}'
-                msg += f'\n<b>Files: </b>{files}'
+                msg += f'\n<b>➦ SubFolders: </b>{folders}'
+                msg += f'\n<b>➦ Files: </b>{files}'
             buttons = ButtonMaker()
-            msg += f'\n\n<b>cc: </b>{self.tag}'
+            msg += f'\n\n<b>➦ User: </b>{self.tag}'
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link", link)
             LOGGER.info(f'Done Uploading {name}')
