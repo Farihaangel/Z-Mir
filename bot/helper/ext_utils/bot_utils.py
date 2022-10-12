@@ -199,7 +199,7 @@ def get_readable_message():
                     msg += f"\n<b>★Extracted:</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
                 elif download.status() == MirrorStatus.STATUS_SPLITTING:
                     msg += f"\n<b>★Splitted:</b> <code>{get_readable_file_size(download.processed_bytes())}</code> of <code>{download.size()}</code>"
-                msg += f"\n<b>★ETA:</b> <code>{download.eta()}</code> <b>✯Elapsed:</b> <code>{get_readable_time(time() - download.message.date.timestamp())}</code>"
+                msg += f"\n<b>★ETA:</b> <code>{download.eta()}</code> \n<b>★Elapsed:</b> <code>{get_readable_time(time() - download.message.date.timestamp())}</code>"
                 msg += f'\n<b>★Speed:</b> <code>{download.speed()}</code> \n<b>★Adder:</b> {download.message.from_user.mention_html(download.message.from_user.first_name)}'
                 if hasattr(download, 'seeders_num'):
                     try:
