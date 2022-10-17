@@ -241,7 +241,7 @@ def get_readable_message():
                 elif 'M' in spd:
                     up_speed += float(spd.split('M')[0]) * 1048576
         bmsg = f"\n<b></b>"
-        bmsg += f"\n<b>★   ✾«🅰️🅽🅶🅴🅻»✾   ★</b>"
+        bmsg += f"\n<b>            ★   ✾«🅰️🅽🅶🅴🅻»✾   ★</b>"
         bmsg += f"\n<b></b>"
         bmsg += f"\n<b>╚━━━━━━━━━━◆❃◆━━━━━━━━━━╝</b>"
         bmsg += f"\n<b>♦FREE:</b> <code>{get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}</code><b> | ♦UPTM:</b> <code>{get_readable_time(time() - botStartTime)}</code>"
